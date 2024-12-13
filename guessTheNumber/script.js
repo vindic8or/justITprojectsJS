@@ -1,21 +1,68 @@
+const buttonStart = document.getElementById("buttonStart");
+let game;
 //? Project Requirements
-//! 1. Random Number Generation: Generate a random number within a given range (e.g., 1 to 
-//! 100) at the start of each game.
+//! 1. Random Number Generation: Generate a random number within a given range (e.g., 1 to 100) at the start of each game.
+//* for the sake of this project, the range is 1 to 100
+
+//? function to generate a random integer between two desired numbers, inclusively 
+function genRandNum(x,y) {
+  //consts below make sure that we are starting at the lower number going up, in case numbers are entered larger to smaller
+  const lower = Number(x < y ? x : y), upper = Number(x > y ? x : y);
+  const randNum = Math.floor((Math.random() * (upper - lower + 1)) + lower);
+  
+  console.log(
+    `Returning a number between ${lower} and ${upper}\n the number is ${randNum}.`
+  );
+  return randNum;
+
+  // logic that makes it only possible for numbers to be entered could be added; ignore for now
+}
+
+buttonStart.addEventListener("click", ()=>{
+  // genRandNum(0,0);
+  ;
+  console.log(
+    
+    getUserInput()
+  );
+  
+})
 
 //! 2. User Input: Allow the user to input their guesses.
+// let userInput = 
+let attempt;
+// console.log(userInput);
+function getUserInput(){
+  attempt = Number(prompt("Enter a number"));
+  console.log(isNaN(attempt));
+  // console.log(attempt);
+  
+  //  getUserInput() return attempt; 
+  if (typeof attempt == "number"){
+    
+    return attempt
+  } else {
+    getUserInput();
+  }
+  // console.log(
+  // );
+  
+}
+
 
 //! 3. Feedback: Provide feedback after each guess:
-//! o If the guess is too high, display "Too High."
-//! o If the guess is too low, display "Too Low."
-//! o If the guess is correct, congratulate the user.
+//!    If the guess is too high, display "Too High."
+//!    If the guess is too low, display "Too Low."
+//!    If the guess is correct, congratulate the user.
+
 
 //! 4. Track Guesses: Keep track of the number of guesses the user has made.
 
-//! 5. Game Restart Option: Provide a button to restart the game, resetting the random number 
-//! and guess count.
 
-//! 6. Input Validation: Ensure that the user's input is a number within the specified range and 
-//! provide an error message if the input is invalid.
+//! 5. Game Restart Option: Provide a button to restart the game, resetting the random number and guess count.
+
+
+//! 6. Input Validation: Ensure that the user's input is a number within the specified range and provide an error message if the input is invalid.
 
 
 

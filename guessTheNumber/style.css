@@ -4,16 +4,16 @@ html {
   width: 100%;
 }
 body{
-  background: linear-gradient(rgb(117, 51, 27), #14034f);
+  background: linear-gradient(rgb(160, 189, 202), #14034f);
   max-width: 1920px;
 }
 header {
-  font-family: "Imperial Script", cursive;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   margin-top: 0;
   text-align: center;
-  text-shadow: rgb(234, 148, 57) 2px 0 5px;
+  text-shadow: rgb(98, 180, 22) 5px 0 5px;
   font-size: 4vw; 
   }
   
